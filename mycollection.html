@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamaCollection</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="core.css">
+</head>
+
+<body>
+    <ion-app>
+        <!--Header START-->
+        <ion-header>
+            <ion-toolbar colour="primary">
+                <ion-title>My Collection</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <!--Header END-->
+
+        <!--Content START-->
+        
+
+             <!-- TOTAL VALUE & BUTTON START-->
+            <ion-toolbar>
+             <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label position="floating">Console</ion-label>
+                            <ion-select value="" id="Console">
+                                <ion-select-option value="ds">Nintendo DS</ion-select-option>
+                                <ion-select-option value="gba">Gameboy Advance</ion-select-option>
+                                <ion-select-option value="n64">Nintendo 64</ion-select-option>
+                                <ion-select-option value="ps1">Playstation 1</ion-select-option>
+                                <ion-select-option value="ps2">Playstation 2</ion-select-option>
+                                <ion-select-option value="ps3">Playstation 3</ion-select-option>
+                                <ion-select-option value="psp">Playstation Portable</ion-select-option>
+                                <ion-select-option value="snes">Super Nintendo</ion-select-option>
+                                <ion-select-option value="wii">Nintendo Wii</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label position="floating">Game Name</ion-label>
+                            <ion-input type="string" id="lbl-item-name"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-datetime display-format="DD MMMM YYYY" value="2020-02-19"></ion-datetime>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item>
+                        <ion-label position="floating">Price</ion-label>
+                        <ion-input type="number" id="lbl-item-cost"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size=8>
+                      <ion-item>Collection total value: £2</ion-item>
+                  </ion-col>
+                  <ion-col>
+                    <ion-button size="block">Add</ion-button>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+        <!-- TOTAL VALUE & BUTTON END-->
+        <ion-content>
+            
+                    <!--CARD START-->
+                    <ion-card>
+                        <ion-card-header> 
+                            <ion-row>
+                                <ion-col size=2>
+                                    <img src="assets/console_icons/wii.ico" height="40"></ion-card-subtitle>                                
+                                </ion-col>
+                                <ion-col>
+                                    <ion-card-title>Super Mario Galaxy</ion-card-title>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>                        
+                        <ion-card-content>
+                                <ion-row>
+                                    <ion-col size=10>
+                                        <ion-card-text>10th March 2020</ion-card-text>
+                                    </ion-col>
+                                    <ion-col>
+                                        <ion-card-text>£300</ion-card-text>
+                                    </ion-col>
+                                </ion-row>
+                        </ion-card-content>
+                    </ion-card>
+                    <!--CARD END-->
+
+                    <!--CARD START-->
+                    <ion-card>
+                        <ion-card-header> 
+                            <ion-row>
+                                <ion-col size=2>
+                                    <img src="assets/console_icons/ps2.ico" height="40"></ion-card-subtitle>                                
+                                </ion-col>
+                                <ion-col>
+                                    <ion-card-title>Final Fantasy X</ion-card-title>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>                        
+                        <ion-card-content>
+                                <ion-row>
+                                    <ion-col size=10>
+                                        <ion-card-text>10th March 2020</ion-card-text>
+                                    </ion-col>
+                                    <ion-col>
+                                        <ion-card-text>£20</ion-card-text>
+                                    </ion-col>
+                                </ion-row>
+                        </ion-card-content>
+                    </ion-card>
+                    <!--CARD END-->
+
+                    <!--CARD START-->
+                    <ion-card>
+                        <ion-card-header> 
+                            <ion-row>
+                                <ion-col size=2>
+                                    <img src="assets/console_icons/gba.ico" height="40"></ion-card-subtitle>                                
+                                </ion-col>
+                                <ion-col>
+                                    <ion-card-title>The Legend of Zelda: The Minish Cap</ion-card-title>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>                        
+                        <ion-card-content>
+                                <ion-row>
+                                    <ion-col size=10>
+                                        <ion-card-text>10th March 2020</ion-card-text>
+                                    </ion-col>
+                                    <ion-col>
+                                        <ion-card-text>£20</ion-card-text>
+                                    </ion-col>
+                                </ion-row>
+                        </ion-card-content>
+                    </ion-card>
+                    <!--CARD END-->
+                
+                </ion-list>
+                
+            </ion-grid>
+        
+    </ion-content>        
+        
+
+        
+    
+        <!--Content END-->
+        <!--Tab Bar // Navigation START--> 
+        <!-- tab="mycollection" will need to replace href w/ Angular ?-->
+        <ion-tabs>
+
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button href="mycollection.html">
+                    <ion-icon name="game-controller"></ion-icon>
+                    <ion-label>My Collection</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button href="mywatchlist.html">
+                    <ion-icon name="list"></ion-icon>
+                    <ion-label>My Watchlist</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button href="dbconnect.html">
+                    <ion-icon name="book"></ion-icon>
+                    <ion-label>Database</ion-label>
+                </ion-tab-button>
+            </ion-tab-bar>
+        </ion-tabs>
+        <!--Tab Bar // Navigation END-->
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+
+</html>

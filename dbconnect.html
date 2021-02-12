@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+
+    <ion-app>
+        <!--Header START-->
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Database</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <!--Header END-->
+        <ion-toolbar>
+        <ion-item>
+            <ion-searchbar></ion-searchbar>
+        </ion-item>
+    </ion-toolbar>
+            
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>Final Fantasy X</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    Final Fantasy X is a role-playing video game developed and published by Square as the tenth main entry in the Final Fantasy series. Originally released in 2001 for PlayStation 2, the game was re-released as Final Fantasy X/X-2 HD Remaster for PlayStation 3 and PlayStation Vita in 2013, for PlayStation 4 in 2015, Microsoft Windows in 2016, and for Nintendo Switch and Xbox One in 2019.
+                    <ion-img src="https://picfiles.alphacoders.com/119/thumb-1920-11926.jpg"></ion-img>
+                </ion-card-content>
+            </ion-card>
+
+        <!--Tab Bar // Navigation START--> 
+        <!-- tab="mycollection" will need to replace href w/ Angular?-->
+        <ion-tabs>
+
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button href="mycollection.html">
+                    <ion-icon name="game-controller"></ion-icon>
+                    <ion-label>My Collection</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button href="mywatchlist.html">
+                    <ion-icon name="list"></ion-icon>
+                    <ion-label>My Watchlist</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button href="dbconnect.html">
+                    <ion-icon name="book"></ion-icon>
+                    <ion-label>Database</ion-label>
+                </ion-tab-button>
+            </ion-tab-bar>
+        </ion-tabs>
+        <!--Tab Bar // Navigation END-->
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+
+</html>
